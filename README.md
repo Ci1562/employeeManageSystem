@@ -1,7 +1,10 @@
-# 員工資料處理系統 Employee Management System
+# 員工資料處理系統
+** Employee Management System **
 
 ## 專案簡介
 本專案為課堂作業練習，使用 Node.js 建立一套基本的員工管理系統，支援新增、查詢、修改與刪除（CRUD）功能，練習後端資料處理邏輯與檔案儲存方式。
+
+![首頁截圖](./public/indexScreenshot.jpg)
 
 ## 使用技術
 - Node.js（搭配 Express 框架）
@@ -17,23 +20,22 @@
 - **資料儲存**：目前資料儲存在記憶體中，未使用資料庫
 
 ## 專案結構
-employeeManageSystem/
-├── employee/ # 員工資料處理相關模組
-      ├── controller/ # js檔存放
-              ├── insertone.js # 新增員工資料
-              ├── query.js # 查詢員工資料
-              ├── update.js # 更新員工資料
-      ├── file/ # 資料存放
-              ├── employee.csv # 員工資料 csv 檔
-              ├── employee.json # 員工資料 json 檔
-      ├── node_modules/ # Node.js 所使用模組
-      ├── views/ # ejs 檔存放
-              ├── index.ejs # 員工資料處理系統首頁
-              ├── insertEmp.ejs
-              ├── queryall.ejs
-              ├── updateEmp.ejs
-├── public/ # 靜態資源（CSS、圖片等）
-├── .gitignore # Git 忽略設定
+├── employee/                 # 員工資料處理相關模組
+│   ├── controller/           # js檔存放
+│   │   ├── insertone.js
+│   │   ├── query.js
+│   │   ├── update.js
+│   ├── file/                 # 資料存放
+│   │   ├── employee.csv
+│   │   ├── employee.json
+│   ├── node_modules/         # Node.js 所使用模組
+│   ├── views/                # ejs 檔存放
+│       ├── index.ejs
+│       ├── insertEmp.ejs
+│       ├── queryall.ejs
+│       ├── updateEmp.ejs
+├── public/                   # 靜態資源（CSS、圖片等）
+├── .gitignore
 
 ## 學習收穫
 - 熟悉 Node.js 與 Express 框架的基本使用

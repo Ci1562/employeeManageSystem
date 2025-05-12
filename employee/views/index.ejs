@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>員工資料處理</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h2><a href="http://localhost:8181/employee">員工資料</a></h2>
+    <main class="idx">
+        <form action="http://localhost:8181/employee/queryEmp" method="get">
+            <fieldset>
+                <legend class="bolder">員工資料處理</legend>
+                <figure class="btn">
+                    <button type="button" id="getall">取得全部資料</button>
+                </figure>
+                <figure class="btn">
+                    <label for="name">姓名：</label>
+                    <input type="text" name="name" id="name">
+                    <input type="submit" value="查詢" class="sub"></input>
+                </figure>
+                <figure>
+                    <button type="button" id="insert">新增</button>
+                </figure>
+            </fieldset>
+            <div>
+                <% if(notFound){ %>
+                <h3>未尋到該筆員工資料:' (</h3>
+                <% } %>
+            </div>
+        </form>
+    </main>
+    <script src="/emp.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+html{
+    /* background-image: linear-gradient(to right, #a1a9c0, #c7d4de); */
+    background-color: #f0efe6;
+    color: #5f7e7b;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2, figure:nth-last-child(1){
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+    /* color: #405a5c; */
+    color: #a83d49;
+    font-weight: bolder;
+}
+
+table{
+    border-collapse: collapse;
+    border:4px solid #5f7e7b;
+    margin:60px auto;
+}
+
+tr, td{
+    border: 2px solid #5f7e7b;
+    width: 80px;
+    padding: 12px;
+}
+
+form{
+    margin-right: 20px;
+    width: 460px;
+}
+
+figure:not(:last-child){
+    padding: 20px;
+    border-bottom: 2px dashed #5f7e7b;
+}
+
+figcaption{
+    font-size: 12px;
+}
+
+button, .sub{
+    color: #405a5c;
+    background-color: #f4f5f1;
+    border: #405a5c solid 1px;
+    border-radius: 25px;
+    padding: 8px;
+    font-weight: bolder;
+}
+
+input{
+    border-radius: 5px;
+    border: #405a5c solid 1px;
+    padding: 6px;
+}
+
+a{
+    color: #405a5c;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.main{
+    margin:60px auto;
+    width: 850px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.idx{
+    margin:60px auto;
+    width: 850px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn{
+    text-align: center;
+    margin: auto;
+}

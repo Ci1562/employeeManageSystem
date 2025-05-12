@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增員工資料</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h2><a href="http://localhost:8181/employee">員工資料</a></h2>
+    <main class="main">
+        <form action="http://localhost:8181/employee/insertone" method="get">
+            <fieldset>
+                <legend class="bolder">新增員工資料</legend>
+                <figure>
+                    <label for="ename">員工姓名：</label>
+                    <input type="text" name="ename" required>
+                </figure>
+                <figure>
+                    <label for="hiredate">到職日期：</label>
+                    <input type="text" name="hiredate" required>
+                </figure>
+                <figure>
+                    <label for="salary">員工薪資：</label>
+                    <input type="text" name="salary" required>
+                </figure>
+                <figure>
+                    <label for="deptno">部門代號：</label>
+                    <input type="text" name="deptno" required>
+                </figure>
+                <figure>
+                    <label for="title">員工職稱：</label>
+                    <input type="text" name="title" required>
+                </figure>
+                <figure>
+                    <input type="submit" class="sub" value="提交">
+                </figure>
+            </fieldset>
+        </form>
+        <% if( isInsert ){ %>
+            <div>
+                <h3>新增成功！</h3>
+                <table class="table">
+                    <tr><td>員工編號</td><td><%= emp.empno %></td></tr>
+                    <tr><td>員工姓名</td><td><%= emp.ename %></td></tr>
+                    <tr><td>到職日期</td><td><%= emp.hiredate %></td></tr>
+                    <tr><td>員工薪資</td><td><%= emp.salary %></td></tr>
+                    <tr><td>部門代號</td><td><%= emp.deptno %></td></tr>
+                    <tr><td>員工職稱</td><td><%= emp.title %></td></tr>
+                </table>
+            </div>
+        <% } %>
+    </main>
+</body>
+</html>

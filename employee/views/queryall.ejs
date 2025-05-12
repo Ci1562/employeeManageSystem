@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>所有員工</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h2><a href="http://localhost:8181/employee">員工資料</a></h2>
+    <% if(nums){ %>
+        <% if(isDel){ %>
+            <h3>員工<%= emp.empno %><%= emp.ename %>已刪除！</h3>
+        <% } %>
+        <table class="table">
+            <tr>
+                <th>員工編號</th>
+                <th>姓名</th>
+                <th>到職日</th>
+                <th>薪資</th>
+                <th>部門代號</th>
+                <th>職稱</th>
+                <th>修改</th>
+                <th>刪除</th>
+            </tr>
+            <% for(let i = 0; i < emps.length; i++){ %>
+                <tr class="btn">
+                    <td><%= emps[i].empno %></td>
+                    <td><a href="http://localhost:8181/employee/getone/<%= emps[i].empno %>"><%= emps[i].ename %></a></td>
+                    <td><%= emps[i].hiredate %></td>
+                    <td><%= emps[i].salary %></td>
+                    <td><%= emps[i].deptno %></td>
+                    <td><%= emps[i].title %></td>
+                    <td><button><a href="http://localhost:8181/employee/updateEmp?empno=<%= emps[i].empno %>">修改</a></button></td>
+                    <td><button><a href="http://localhost:8181/employee/deleteone?empno=<%= emps[i].empno %>">刪除</a></button></td>
+                </tr>
+            <% } %>
+        </table>
+    <% }else{ %>
+        <table class="table">
+            <tr><td>員工編號</td><td><%= emp.empno %></td></tr>
+            <tr><td>姓名</td><td><%= emp.ename %></td></tr>
+            <tr><td>到職日</td><td><%= emp.hiredate %></td></tr>
+            <tr><td>薪資</td><td><%= emp.salary %></td></tr>
+            <tr><td>部門代號</td><td><%= emp.deptno %></td></tr>
+            <tr><td>職稱</td><td><%= emp.title %></td></tr>
+        </table>
+    <% } %>    
+</body>
+</html>

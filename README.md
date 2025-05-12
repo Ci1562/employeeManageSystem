@@ -20,6 +20,7 @@
 - **資料儲存**：目前資料儲存在記憶體中，未使用資料庫
 
 ## 專案結構
+```markdown
 ├── employee/                 # 員工資料處理相關模組
 │   ├── controller/           # js檔存放
 │   │   ├── insertone.js
@@ -36,6 +37,7 @@
 │       ├── updateEmp.ejs
 ├── public/                   # 靜態資源（CSS、圖片等）
 ├── .gitignore
+```
 
 ## 學習收穫
 - 熟悉 Node.js 與 Express 框架的基本使用
